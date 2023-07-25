@@ -1,4 +1,5 @@
 "use client";
+import Grid from "@/Components/Grid";
 import List from "@/Components/List";
 import axios from "axios";
 import React, { useEffect } from "react";
@@ -6,6 +7,8 @@ import { useState } from "react";
 
 function News() {
     const [articles, setArticles] = useState([]);
+    const [toogleList, setToogleList] = useState(true);
+
       useEffect(() => {
         // Get data
            axios
@@ -25,7 +28,9 @@ function News() {
     return (
 
         <div className="input-wrapper">
-            <List articles={articles} />
+            {toogleList?<List articles={articles} />:<Grid articles={articles}/>}
+            
+
         </div>
 
     );
