@@ -1,0 +1,25 @@
+.grid-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px !important;
+        min-height: 250px !important;
+        background: linear-gradient(177.7deg,
+                rgba(58, 129, 191, 0.3) 1.63%,
+                rgba(65, 48, 90, 0.009) 148.18%);
+        border-radius: 1rem;
+        padding: 0.5rem;
+        opacity: 0.7;
+        cursor: pointer;
+}
+.img-grid {
+    height: 20rem!important;
+    width: 15rem !important;
+}
+.grid-wrapper{
+    display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+}

@@ -4,7 +4,7 @@ import List from "@/Components/List";
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-
+import "./style.css"
 function News() {
     const [articles, setArticles] = useState([]);
     const [toogleList, setToogleList] = useState(true);
@@ -25,15 +25,30 @@ function News() {
              });
        
       }, []);
-    return (
-
+  return (
+    <div>
+      <div className="second_header">
+        
+          <div className="category-wrapper">
+            <p>Bussiness</p>
+            <p>Sports</p>
+            <p>Politics</p>
+            <p>Technology</p>
+            <p>Music</p>
+          </div>
+          <button onClick={()=>setToogleList(!toogleList)}>list</button>
+      </div>
+      
         <div className="input-wrapper">
-            {toogleList?<List articles={articles} />:<Grid articles={articles}/>}
-            
-
+          {toogleList ? (
+            <List articles={articles} />
+          ) : (
+            <Grid articles={articles} />
+          )}
         </div>
-
-    );
+      </div>
+    
+  );
 }
 
 export default News;
