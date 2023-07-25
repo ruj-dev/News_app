@@ -12,6 +12,15 @@
   --purple-grey: #8f8297;
 
 }
+ .input-wrapper {
+   width: 80vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   margin-top: 4rem;
+ }
 
 html,
 body {
